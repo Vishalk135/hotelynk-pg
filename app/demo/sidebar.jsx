@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import {
   LayoutDashboard,
   CalendarCheck2,
-  RefreshCw,
+  IndianRupee,
   Receipt,
   Users,
   UserCircle2,
@@ -26,7 +26,7 @@ const NAV_ITEMS = [
     icon: CalendarCheck2,
     tint: "text-coral",
   },
-  { href: "/demo/sync", label: "Channel sync", tag: "SYNC", icon: RefreshCw, tint: "text-azure" },
+  { href: "/demo/rates", label: "Room rates", tag: "RATES", icon: IndianRupee, tint: "text-azure" },
   { href: "/demo/pos", label: "Shack POS", tag: "SHACK", icon: Receipt, tint: "text-mustard" },
   { href: "/demo/staff", label: "Staff", tag: "CREW", icon: Users, tint: "text-cream" },
   { href: "/demo/team", label: "Team", icon: UserCircle2 },

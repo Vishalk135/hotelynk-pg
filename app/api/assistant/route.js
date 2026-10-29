@@ -110,10 +110,18 @@ export async function POST(req) {
     });
   }
 
-  if (q.includes("sync") || q.includes("channel") || q.includes("airbnb")) {
+  if (q.includes("rate") || q.includes("price") || q.includes("tariff") || q.includes("cost per night")) {
+    const [row] = await query(
+      `SELECT COUNT(*)::int AS n, MIN(price) AS lo, MAX(price) AS hi, ROUND(AVG(price))::int AS avg
+         FROM rooms WHERE property_id = $1`,
+      [propertyId]
+    );
     return NextResponse.json({
-      reply:
-        "Channel sync is a preview feature — real Airbnb/Booking.com/MakeMyTrip integration requires becoming an approved connectivity partner with each platform.",
+      reply: row.n
+        ? `You have ${row.n} rooms. Nightly rates run from ₹${Number(row.lo).toLocaleString("en-IN")} to ₹${Number(
+            row.hi
+          ).toLocaleString("en-IN")}, averaging ₹${Number(row.avg).toLocaleString("en-IN")}. See the Room rates page for the full list.`
+        : "You haven't added any rooms yet, so there are no rates to show.",
     });
   }
 
@@ -126,6 +134,6 @@ export async function POST(req) {
 
   return NextResponse.json({
     reply:
-      "I can help with occupancy, arrivals/departures, revenue, stock levels, or staff on duty — try asking about one of those.",
+      "I can help with occupancy, arrivals/departures, revenue, stock levels, room rates, or staff on duty — try asking about one of those.",
   });
 }

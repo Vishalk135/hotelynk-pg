@@ -15,7 +15,7 @@ export default function AssistantWidget() {
   const [messages, setMessages] = useState([
     {
       role: "assistant",
-      text: "Hi Rohan — ask me anything about today's bookings, stock, staff, or channel sync.",
+      text: "Hi! Ask me about today's bookings, stock, staff, or room rates.",
     },
   ]);
   const [input, setInput] = useState("");

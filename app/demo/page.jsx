@@ -122,7 +122,7 @@ export default async function OverviewPage() {
       : {
           label: "Orders this week",
           value: `${weekOrders.length}`,
-          sub: "across all channels",
+          sub: "from the shack POS",
           icon: IndianRupee,
           tint: "text-mustard-dark",
           bg: "bg-mustard/15",

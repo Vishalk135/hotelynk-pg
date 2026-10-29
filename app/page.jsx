@@ -1,6 +1,6 @@
 import {
   CalendarCheck2,
-  RefreshCw,
+  IndianRupee,
   Receipt,
   Users,
   ArrowRight,
@@ -44,13 +44,13 @@ const MODULES = [
     big: true,
   },
   {
-    code: "SYNC",
-    name: "Channel manager",
-    body: "Airbnb, Booking.com and MakeMyTrip, kept in lockstep. Change a rate once, it lands everywhere in seconds.",
+    code: "RATES",
+    name: "Room rates",
+    body: "Every room, its nightly rate and its status in one place, always matching your live bookings.",
     tint: "text-azure",
     bg: "bg-azure/10",
     ring: "ring-azure/20",
-    icon: RefreshCw,
+    icon: IndianRupee,
     big: true,
   },
   {
@@ -77,12 +77,12 @@ const MODULES = [
 
 const COMPARISON = [
   {
-    old: "Same room booked twice on two different platforms",
-    now: "One calendar, synced everywhere, in real time",
+    old: "Same room booked twice because the diary and WhatsApp disagree",
+    now: "One booking calendar, always up to date",
   },
   {
-    old: "Rates drift out of sync between Airbnb and Booking.com",
-    now: "Change a rate once — it updates on every channel",
+    old: "Room rates scribbled in different notebooks and chats",
+    now: "One rate list for every room, always in front of you",
   },
   {
     old: "You find out you're out of stock mid-order",
@@ -145,7 +145,7 @@ export default function Home() {
                 </span>
               </h1>
               <p className="mx-auto mt-6 max-w-xl font-body text-lg leading-relaxed text-cream/60">
-                Bookings, channel sync, POS and staffing — replacing the WhatsApp threads and loose
+                Bookings, room rates, POS and staffing — replacing the WhatsApp threads and loose
                 spreadsheets running your guesthouse, villa, shack, or water sports business today.
               </p>
               <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
@@ -207,11 +207,10 @@ export default function Home() {
                     </div>
                     <div className="rounded-2xl border border-cream/[0.06] bg-cream/[0.03] p-4">
                       <span className="font-mono text-[10px] uppercase tracking-wide text-cream/40">
-                        Synced
+                        On duty
                       </span>
                       <p className="mt-1 flex items-center gap-1.5 font-body text-sm text-cream">
-                        <span className="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-moss" />3
-                        channels
+                        <span className="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-moss" />4 of 6 staff
                       </p>
                     </div>
                   </div>
