@@ -1,0 +1,42 @@
+FILES IN THIS PATCH  (copy each to the same path in your project, overwriting)
+
+CHANGED (24):
+  .env.local.example
+  README.md
+  app/api/assistant/route.js
+  app/api/bookings/route.js
+  app/demo/bookings/add-room-button.jsx
+  app/demo/bookings/bookings-client.jsx
+  app/demo/bookings/page.jsx
+  app/demo/layout.jsx
+  app/demo/page.jsx
+  app/demo/pos/add-menu-item-button.jsx
+  app/demo/pos/pos-client.jsx
+  app/demo/sidebar.jsx
+  app/demo/staff/add-staff-button.jsx
+  app/demo/staff/roles-manager.jsx
+  app/demo/staff/schedule/bulk-assign-modal.jsx
+  app/demo/staff/schedule/schedule-client.jsx
+  app/demo/staff/schedule/shift-types-manager.jsx
+  app/demo/staff/staff-row-actions.jsx
+  app/demo/team/add-team-member-button.jsx
+  app/demo/team/remove-team-member-button.jsx
+  lib/dates.js
+  lib/db.js
+  lib/session.js
+  package.json
+
+NEW (13):
+  app/admin/loading.jsx
+  app/demo/assistant-lazy.jsx
+  app/demo/bookings/loading.jsx
+  app/demo/loading.jsx
+  app/demo/overview-chart-lazy.jsx
+  app/demo/pos/loading.jsx
+  app/demo/skeletons.jsx
+  app/demo/staff/loading.jsx
+  app/demo/staff/schedule/loading.jsx
+  app/demo/team/loading.jsx
+  app/demo/use-refresh.js
+  scripts/create-admin.js
+  vercel.json

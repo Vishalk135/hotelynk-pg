@@ -1,0 +1,19 @@
+# Optional: run PostgreSQL in Docker instead of installing it.
+#   docker compose up -d     (start)
+#   docker compose down      (stop; data is kept in the volume)
+services:
+  db:
+    image: postgres:16
+    container_name: hotelynk-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: hotelynk
+      POSTGRES_PASSWORD: hotelynk
+      POSTGRES_DB: hotelynk
+    ports:
+      - "5432:5432"
+    volumes:
+      - hotelynk-pgdata:/var/lib/postgresql/data
+
+volumes:
+  hotelynk-pgdata:
